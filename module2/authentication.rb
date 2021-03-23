@@ -14,8 +14,7 @@ users = [
     {user_name: "Stas", password: "password4"},
     {user_name: "Vika", password: "password5"},
 ]
-examp = {"Name" => "Sasha"}
-puts "#{examp["Name"]}"
+
 newArr = [1,2,3,4,5]
 let = 4
 
