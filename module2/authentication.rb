@@ -12,8 +12,12 @@ users = [
     {user_name: "Ivan", password: "password2"},
     {user_name: "Dima", password: "password3"},
     {user_name: "Stas", password: "password4"},
-    {user_name: "Vika", password: "password5"}
+    {user_name: "Vika", password: "password5"},
 ]
+examp = {"Name" => "Sasha"}
+puts "#{examp["Name"]}"
+newArr = [1,2,3,4,5]
+let = 4
 
 puts "Simple authentication program"
 25.times do 
@@ -34,7 +38,7 @@ validationState = false
         break
     end
 end
-if validationState == false
+if !validationState
     puts "Attemps is over"
 end
 
