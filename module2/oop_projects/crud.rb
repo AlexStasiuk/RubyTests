@@ -26,19 +26,13 @@ end
 def auth_user(user_name, password, list_of_users)
     list_of_users.each do |user|
         if user[:username] == user_name && verify_hash_digest(user[:password]) == password
-          return user
+            return user
         end
     end
     return "There is no such user in"
 end
 
 users = create_secure_users(users)
-
-25.times do 
-    print "-"
-end
-puts
-
 validationState = false
 3.times do
     puts "Input name"
