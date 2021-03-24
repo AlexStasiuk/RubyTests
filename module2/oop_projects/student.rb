@@ -1,4 +1,7 @@
+require_relative 'crud_module'
+
 class Student
+    include Crud
     attr_accessor :first_name, :last_name, :email, :username, :password
     #attr_reader 
     #attr_writer 
@@ -16,5 +19,6 @@ end
 
 sasha = Student.new("Sasha","Stasiuk","AlexStasiuk","stasiuk@example.com","11111")
 oleg = Student.new("Oleg","Levchenko","","","")
+sasha.password = sasha.create_hash_digest(sasha.password)
 puts sasha
 puts oleg
